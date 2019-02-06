@@ -393,8 +393,10 @@ def add_donor_reads(args, mutid, tmpbamfn, bdup_chrom, bdup_left_bnd, bdup_right
         try:
             right_cover = right_zero+1
         except TypeError:
+            right_zero_print_value = 'None' if right_zero is None else str(right_zero)
+            right_cover_print_value = 'None' if right_cover is None else str(right_cover)
             logger.info('%s: TypeError raised from %s-%d-%d' % (mutid, bdup_chrom, bdup_left_bnd, bdup_right_bnd))
-            logger.info('%s: right_zero:%d, right_cover:%d' % (right_zero, right_cover))
+            logger.info('%s: right_zero:%s, right_cover:%s' % (right_zero_print_value, right_cover_print_value))
 
     logger.info('%s: left_zero=%d, left_cover=%d, right_zero=%d, right_cover=%d' % (mutid, left_zero, left_cover, right_zero, right_cover))
 
