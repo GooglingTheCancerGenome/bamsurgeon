@@ -11,3 +11,4 @@ dependencies:
   - picard>=1.131
   - exonerate>=2.2
   - velvet>=1.2
+  - openssl=1.0
