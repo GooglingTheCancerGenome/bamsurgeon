@@ -78,3 +78,16 @@ Pysam
 pip install cython
 pip install pysam
 ```
+
+# Installation via Conda
+
+```
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh  # python3
+bash miniconda.sh  # install & add conda to your PATH
+source ~/.bashrc
+conda update -y conda  # update conda
+conda env create -n bamsurgeon -f environment.yaml # create env & install dependencies
+conda activate bamsurgeon
+
+python setup.py install
+```
